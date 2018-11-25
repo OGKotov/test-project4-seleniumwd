@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Необходимая корфигурация должна быть обернута в теги, с подходящим по смыслу названием. Каждый тег долджен содержать
+атрибут id, предназначенный для более тонкого поиска необходимого конфигурационного значения-->
+
+<configdatafortest>
+    <!--Название браузера, которым инициализируется драйвер. Для иницилизации драйвера, могут использоваться следующие значение
+  FIREFOX, CHROME, IEEXPLORER, OPERA, EDGE, SAFARI -->
+    <browser id="browserForTest">CHROME</browser>
+
+    <!--Путь к главной странице сайта, который тестируется-->
+    <urltestsite id="urlSiteForTes">https://shop.by</urltestsite>
+
+    <!--Значение тега title главной страницы сайта-->
+    <titlepage id="titlemainpage">Торговый портал Shop.by – Все интернет-магазины Минска и Беларуси</titlepage>
+
+    <!--EMail для авторизации (не работает) -->
+    <email id="emailforautorization">o.g.kotov@gmail.com</email>
+    <!--Телефонный номер для авторицации-->
+    <telnumber id="telnumberforautorization">447323046</telnumber>
+    <!--Пароль для авторизации-->
+    <password id="passwordforautorization">selenium</password>
+
+    <!--Псевдоним для проверки авторизации-->
+    <nickname id="nickname">kotov</nickname>
+
+    <!--Верхнее регулярное выражение для выбора подстроки с отзывами покупателей из строки c версткой страницы -->
+    <pattern id="customerfeedback">Отзывы покупателей</pattern>
+    <!--Нижнее регулярное выражение для выбора подстроки с отзывами покупателей из строки c версткой страницы -->
+    <pattern id="watchingnow">Сейчас смотрят</pattern>
+    <!--Верхнее регулярное выражение для выбора подстроки с отзывом покупателя из строки с отзывами покупателей-->
+    <pattern id="beforefeedback">NameBlockModel&quot;&gt;\n.+?desc&quot;&gt;</pattern>
+    <!--Нижнее регулярное выражение для выбора подстроки с отзывом покупателя из строки с отзывами покупателей-->
+    <pattern id="afterfeedback">&lt;/a&gt;&lt;a href(\d|\D)+?AuthorBlockModel</pattern>
+
+    <!--Путь к файлу csv с результатом товарнов, на которые есть отзывы на главной странице-->
+    <pathresult id="pathfeedbaackcsv">target/data.csv</pathresult>
+
+    <!--Ключевое слово для проверки выхода из аккаунта-->
+    <keyword id="exitkeyword">Войти</keyword>
+
+
+
+</configdatafortest>
